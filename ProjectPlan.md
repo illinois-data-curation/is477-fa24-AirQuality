@@ -86,7 +86,17 @@ In other words, the level of air pollution from one period affects health outcom
 
 ### 4.1 Dataset Sources
 
+#### EPA Air Quality Data: https://aqs.epa.gov/aqsweb/airdata/download_files.html#Annual
 
+This dataset, sourced from the U.S. Environmental Protection Agency’s (EPA) Air Quality System (AQS), offers comprehensive annual air quality data spanning multiple years and geographic locations within the United States. The dataset includes measurements of various pollutants, such as particulate matter (PM2.5, PM10), ozone (O3), sulfur dioxide (SO2), nitrogen dioxide (NO2), and carbon monoxide (CO). These pollutants are monitored across numerous state and local air quality stations, providing a detailed overview of air quality trends over time and across regions.
+
+In alignment with the project’s objective—to examine the association of health outcomes with air quality over time in various locations—this dataset can serve as a critical input for analyzing how fluctuations in pollutant levels impact respiratory health and other health outcomes. With data spanning from 2000-2010, researchers can use this dataset to study pollution trends, seasonal variations, and specific events affecting air quality, ultimately supporting policy development and resource allocation to mitigate adverse health effects.
+
+#### CDC Health Outcomes Data: https://www.cdc.gov/brfss/annual_data/annual_data.htm
+
+This dataset, provided by the CDC’s Behavioral Risk Factor Surveillance System (BRFSS), includes annual health survey data across U.S. states and territories. The BRFSS dataset contains self-reported health information on a variety of topics, including chronic respiratory conditions like asthma and chronic obstructive pulmonary disease (COPD), as well as general health, healthcare access, and risk factors such as smoking status.
+
+In the context of this project, which aims to analyze the impact of air quality on health outcomes over time in different regions, the BRFSS dataset can serve as a key source of health-related information. The dataset spans from 2000 to 2010, allowing researchers to assess long-term health trends alongside air quality changes. With its state-level breakdown, the BRFSS data can be used to correlate air pollution exposure with reported respiratory health issues and hospitalization rates, supporting analyses on the geographic and temporal impacts of air quality on public health.
 
 
 ## 5. Timeline
