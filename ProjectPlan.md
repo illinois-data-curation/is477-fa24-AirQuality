@@ -24,6 +24,7 @@ The primary aim of this research is to establish the regional variation in air q
 ### 2.1 Primary Research Question
 
     - **How does air quality affect health outcomes across different regions over time?**
+
         -It will then analyze if the areas with poor air quality indicate more adverse health outcomes, such as respiratory problems or hospital admissions. Thus, this question aims to see whether there is general correspondence between air pollution and health indicators.
 
 ### 2.2 Sub-Questions
@@ -31,23 +32,33 @@ The primary aim of this research is to establish the regional variation in air q
 Several sub-questions are considered in order to satisfy the main topic. These sub-questions allow a closer view through the division of the main topic into particular facets of location, seasonality, and pollutant kinds:
 
 1. **Seasonal Impact on Health Outcomes**:
+
    - **Do health outcomes associated with air quality vary seasonally within the same area?**
+
         -This sub-question examines the hypothesis that poorer health outcomes may be associated with specific seasons. For instance, in those locations experiencing large changes in air quality, heating emissions in winter or higher levels of ozone in summer can produce spikes in adverse health effects.
 
 2. **Geographic Differences in Air Quality and Health Outcome Relationship**:
+
    - **Are there specific regions where the relationship between air quality and health outcomes is stronger?**
+
         -The following query looks into geographic variability to assess whether there are areas that would be most susceptible to the adverse health effects of changes in air quality. This will review differences across urban, suburban, and rural areas to look at whether there is greater association between air quality and health outcomes in some places compared to others.
 
 3. **Type of Pollutant and Its Differential Impact on Health Outcomes**:
+
    - **Do specific pollutants (e.g., PM2.5, NO2, O3) have a different effect on health outcomes?**
+
         -Air quality statistics also involve different categories of pollutants. This sub-question will, therefore, investigate whether some categories of pollutants have a greater effect on health outcomes in determining which ones are most harmful to public health.
 
 4. **Threshold Levels and Health Outcome Sensitivity**:
+
    - **Is there a threshold level of pollutant concentration that significantly impacts health outcomes?**
+
         -The following question asks whether there is a threshold for levels of pollutants beyond which measurable health outcomes noticeably deteriorate. For instance, do health problems become appreciably more common when PM2.5 levels rise over a particular threshold?
 
 5. **Lagged Effects of Air Quality on Health Outcomes**:
+
    - **Do changes in air quality in one period (e.g., previous month or season) predict changes in health outcomes in subsequent periods?**
+   
         -It will further investigate whether the variation in air quality in one period has a lagged health consequence in another month or season. This project will contribute to the identification of time lags in the adverse health effects caused by poor air quality.
 
 ### 2.3 Hypotheses
