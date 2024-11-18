@@ -22,11 +22,24 @@ Below is an update on each task as outlined in the initial project plan, includi
 
 ### Task 2: Data Cleaning
 - **Status**: Completed
-- **Description**: Looking at our two types of datasets, we were planning on merging the two. However, they were formatted differently and in order to combine the two we would need to perform some cleaning. This included cleaning the "County" variable in the CDC dataset and we would need to split it into just the County name since the variable included the state code in it as well.
+- **Description**: Looking at our two types of datasets, we were planning on merging the two. However, they were formatted differently and in order to combine the two we would need to perform some cleaning. This included dropping the following variables from the EPA table: [ ‘Site Num', ‘Parameter Code', ‘Latitude', ‘Longitude', ‘Datum', ‘Sample Duration',
+‘Pollutant Standard', ‘Metric Used', ‘Method Name','Event Type',
+‘Completeness Indicator', 'Valid Day Count', ‘Required Day Count',
+"Null Data Count', 'Secondary Exceedance Count',
+"Secondary Exceedance Count', ‘Certification Indicator’,
+‘Certification Indicator', ‘Num Obs Below MDL',
+‘Arithmetic Mean', ‘Arithmetic Standard Dev', ‘1st Max Value','1st Max DateTime',
+"2nd Max Value', ‘2nd Max DateTime', ‘3rd Max Value', ‘3rd Max DateTime’,
+‘4th Max Value', '4th Max DateTime', ‘1st Max Non Overlapping Value',
+‘Ist NO Max DateTime', '2nd Max Non Overlapping Value',
+"2nd NO Max DateTime', '99th Percentile', ‘98th Percentile', ‘95th Percentile',
+‘90th Percentile','75th Percentile’, ‘50th Percentile’, ‘10th Percentile',
+‘Address', ‘Date of Last Change’ ]. Additionally, from the CDC table, we dropped the following columns: ['Notes','Year Code', ‘Crude Rate Lower 95% Confidence Interval',
+‘Crude Rate Upper 95% Confidence Interval','Crude Rate Standard Error']. We also removed any rows that contained null or NaN valuees.
 
 ### Task 3: Data Integration
 - **Status**: Completed
-- **Description**: In order to integrate the data, we combined the EPA data by year since they are all different files. We then merged the two datasets together by state.
+- **Description**: In order to integrate the data, we combined the EPA data by year since they are all different files in order to correspond with the years of the CDC table. This would allow us to be able to work with both datasets more smoothly.
 
 ---
 
