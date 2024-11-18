@@ -34,8 +34,8 @@ Below is an update on each task as outlined in the initial project plan, includi
 ‘Ist NO Max DateTime', '2nd Max Non Overlapping Value',
 "2nd NO Max DateTime', '99th Percentile', ‘98th Percentile', ‘95th Percentile',
 ‘90th Percentile','75th Percentile’, ‘50th Percentile’, ‘10th Percentile',
-‘Address', ‘Date of Last Change’ ]. Additionally, from the CDC table, we dropped the following columns: ['Notes','Year Code', ‘Crude Rate Lower 95% Confidence Interval',
-‘Crude Rate Upper 95% Confidence Interval','Crude Rate Standard Error']. We also removed any rows that contained null or NaN valuees.
+‘Address', ‘Date of Last Change’ ]. Additionally, from the CDC table, we dropped the following columns: ['Notes', 'Year Code', ‘Crude Rate Lower 95% Confidence Interval',
+‘Crude Rate Upper 95% Confidence Interval','Crude Rate Standard Error']. We also removed any rows that contained null or NaN values.
 
 ### Task 3: Data Integration
 - **Status**: Completed
@@ -50,8 +50,8 @@ The following timeline provides an updated view of the project’s progress, ind
  **Week**       | **Tasks**                                                                                                           | **Team Member(s)**       |
 |----------------|---------------------------------------------------------------------------------------------------------------------|--------------------------|
 | **Week 1**     | **Data Collection**: Acquire datasets from EPA API and CDC WONDER API. Implement integrity checks. COMPLETED                 | [Kashan]                 |
-| **Week 2**     | **Data Cleaning**: Programmatic integration of datasets (merge air quality and health outcome data). COMPLETED             | [Izhaan, Kashan ]        |
-| **Week 3**     | **Data Integration**: Profile and clean datasets, handle missing values, and ensure consistency. COMPLETED                       | [Kashan]                 |
+| **Week 2**     | **Data Cleaning**: Profile and clean datasets, handle missing values, and ensure consistency. COMPLETED             | [Izhaan, Kashan ]        |
+| **Week 3**     | **Data Integration**: Programmatic integration of datasets (merge air quality and health outcome data). COMPLETED                       | [Kashan]                 |
 | **Week 4**     | **Exploratory Data Analysis**: Initial analysis to identify trends, correlations, and patterns.                     | [Izhaan]                 |
 | **Week 5**     | **Data Analysis**: Perform correlation and regression analysis to explore air quality-health outcome relationships. | [Izhaan]                 |
 | **Week 6**     | **Visualization**: Generate visualizations for trends and correlations between air quality and health outcomes.     | [Izhaan]                 |
