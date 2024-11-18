@@ -38,6 +38,7 @@ To start off the project is laid out like this :
 - - - all scripts
 - - ProjectPlan.md
 - - README.md
+- - StatusReport.md
 
 To run the scripts the project must be set up in this format. **"Note: only the folders for the output need to be created the scripts will populate the folders"**
 
