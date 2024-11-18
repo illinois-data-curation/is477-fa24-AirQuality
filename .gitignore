@@ -1,3 +1,7 @@
 output/cleanedInputs/cleaned_cdc_data.csv
 
 output/cleanedInputs/cleaned_epa_data.csv
+
+output/uncleanedInputs/cdc_data.csv
+
+output/uncleanedInputs/combined_epa_data.csv
