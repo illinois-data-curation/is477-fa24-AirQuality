@@ -3,9 +3,10 @@
 
 ## 1. Overview of the Project and Objectives
 The primary goal of this project is to find the correspondence between air quality and its health ouctomes in different areas. This project aims to accomplish the following:
-- **Objective 1**: Whether there are specific regions where the relationship is stronger
-- **Objective 2**: The impact of specific pollutants
-- **Objective 3**: Lagged affects of air quality on health
+- **Objective 1**: The overall effect of air quality and pollutants on health ouctomes
+- **Objective 2**: Whether there are specific regions where the relationship is stronger
+- **Objective 3**: The impact of specific pollutants
+- **Objective 4**: Lagged affects of air quality on health
 
 These objectives guide the development and implementation phases to ensure the the final deliverable is able to answer the general impact air quality has on health outcomes.
 
@@ -17,15 +18,15 @@ Below is an update on each task as outlined in the initial project plan, includi
 ### Task 1: Data Collection
 - **Status**: Completed
 - **Artifacts**: CDC Wonder API: https://wonder.cdc.gov/cmf-icd10.html, EPA API: https://aqs.epa.gov/aqsweb/documents/data_api.html
-- **Description**: Initially, one of the datasets we were planning on using was not extremely valuable toward our final vision. Therefore, one of the first things we did was find one from the CDC that worked better with our project plan. The first dataset we accessed was from the CDC Wonder API. According to the data use restrictions, we are using the data for analysis only and are making no attempts to learn the identities of people included in the data. We wanted to focus our research on the years 2000-2003, and extracted that specific data from the API into datasets within our "data" folder. Similarly with above, to get information on the air quality, we accessed the Air Quality System API given by the EPA. According to their license, the data is considered public domain, therefore we can use the data without need for explicit permission. We also took the data from this and included it in our "data folder" for the corresponding years.
+- **Description**: Initially, one of the datasets we were planning on using was not extremely valuable toward our final vision. Therefore, one of the first things we did was find a dataset from the CDC that worked better with our project plan. The first dataset we accessed was from the CDC Wonder API. According to the data use restrictions, we are using the data for analysis only and are making no attempts to learn the identities of people included in the data. We wanted to focus our research on the years 2000-2003, and extracted that specific data from the API into datasets within our "data" folder. Similarly with above, to get information on the air quality, we accessed the Air Quality System API given by the EPA. According to their license, the data is considered public domain, therefore we can use the data without need for explicit permission. We also took the data from this and included it in our "data folder" for the corresponding years.
 
 ### Task 2: Data Cleaning
 - **Status**: Completed
-- **Description**: Looking at out two types of datasets, we were planning on merging the two. However, they were formatted differently and in order to combine the two we would need to perform some cleaning. This included cleaning the "County" variable in the CDC dataset and we would need to split it into just the County name since the variable included the state code in it as well.
+- **Description**: Looking at our two types of datasets, we were planning on merging the two. However, they were formatted differently and in order to combine the two we would need to perform some cleaning. This included cleaning the "County" variable in the CDC dataset and we would need to split it into just the County name since the variable included the state code in it as well.
 
 ### Task 3: Data Integration
 - **Status**: Completed
-- **Description**: In order to integrate the data, we combined the EPA data by year since they are all different files. We then marged the two datasets together by state.
+- **Description**: In order to integrate the data, we combined the EPA data by year since they are all different files. We then merged the two datasets together by state.
 
 ---
 
