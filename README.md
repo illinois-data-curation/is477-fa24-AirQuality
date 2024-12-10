@@ -18,26 +18,26 @@ The fundamental premise is that poorer air quality adversely affects health, pot
 We will be using the following objectives to guide our research:
 
 - **Objective 1: The overall effect of air quality and pollutants on health ouctomes**
--- What is the overall effect certain pollutants have on health effects?
--- We will be looking at whether pollutants have an effect on health outcomes, and what type of effect.
+  - What is the overall effect certain pollutants have on health effects?
+  - We will be looking at whether pollutants have an effect on health outcomes, and what type of effect.
 - **Objective 2: Geographic Differences in Air Quality and Health Outcome Relationship**
--- Are there specific regions where the relationship between air quality and health outcomes is stronger?
--- The following query looks into geographic variability to assess whether there are areas that would be most susceptible to the adverse health effects of changes in air quality. This will review differences across urban, suburban, and rural areas to look at whether there is greater association between air quality and health outcomes in some places compared to others.
+  - Are there specific regions where the relationship between air quality and health outcomes is stronger?
+  - The following query looks into geographic variability to assess whether there are areas that would be most susceptible to the adverse health effects of changes in air quality. This will review differences across urban, suburban, and rural areas to look at whether there is greater association between air quality and health outcomes in some places compared to others.
 - **Objective 3: The impact of specific pollutants**
--- Do specific pollutants (e.g., PM2.5, NO2, O3) have a different effect on health outcomes?
--- Air quality statistics also involve different categories of pollutants. This sub-question will, therefore, investigate whether some categories of pollutants have a greater effect on health outcomes in determining which ones are most harmful to public health.
+  - Do specific pollutants (e.g., PM2.5, NO2, O3) have a different effect on health outcomes?
+  - Air quality statistics also involve different categories of pollutants. This sub-question will, therefore, investigate whether some categories of pollutants have a greater effect on health outcomes in determining which ones are most harmful to public health.
 - **Objective 4: Lagged affects of air quality on health**
--- Do changes in air quality in one period (e.g., previous month or season) predict changes in health outcomes in subsequent periods?
--- It will further investigate whether the variation in air quality in one period has a lagged health consequence in another period. This project will contribute to the identification of lagged health effects caused by poor air quality.
+  - Do changes in air quality in one period (e.g., previous month or season) predict changes in health outcomes in subsequent periods?
+  - It will further investigate whether the variation in air quality in one period has a lagged health consequence in another period. This project will contribute to the identification of lagged health effects caused by poor air quality.
 
 This research, guided by the outlined objectives, aims to provide a thorough analysis of the relationship between air quality and health outcomes. By examining the overall effects of pollutants, exploring geographic differences, assessing the impact of specific pollutants, and identifying potential lagged health effects, the study seeks to offer a multi-faceted understanding of how air quality influences public health.
 
 ## Data Profile
 
 - Centers for Disease Control and Prevention Wonder API
--- https://wonder.cdc.gov/cmf-icd10.html
+  - https://wonder.cdc.gov/cmf-icd10.html
 - Environmental Protection Agency API
--- https://aqs.epa.gov/aqsweb/documents/data_api.html
+  - https://aqs.epa.gov/aqsweb/documents/data_api.html
 
 The first dataset we selected was obtained through the CDC Wonder API. The dataset includes detailed information on deaths occurring within the U.S., categorized by demographic factors such as age, race, sex, and geographic location (state and county). The data is derived from death certificates filed in all 50 states and the District of Columbia and is coded according to the International Classification of Diseases.
 
