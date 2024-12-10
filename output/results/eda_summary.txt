@@ -1,0 +1,47 @@
+Summary Statistics for Health Outcomes:
+             Deaths    Population    Death Rate
+count  48501.000000  4.850100e+04  48501.000000
+mean    6196.276613  8.094225e+05    852.159275
+std     9393.606590  1.376202e+06    210.406602
+min       30.000000  6.386000e+03    118.073048
+25%     1222.000000  1.496390e+05    701.569709
+50%     3061.000000  3.857800e+05    828.992704
+75%     7130.000000  8.471930e+05    988.586912
+max    61093.000000  9.767145e+06   1534.497567
+
+Summary Statistics for Pollutants:
+       Primary Exceedance Count  Observation Count  Observation Percent
+count              48501.000000       48501.000000         48501.000000
+mean                  11.322674        2716.996495            87.902229
+std                   31.586154        3425.601606            19.424289
+min                    0.000000           1.000000             0.000000
+25%                    0.000000         107.000000            89.000000
+50%                    1.000000         314.000000            95.000000
+75%                    6.000000        5824.000000            98.000000
+max                  329.000000        8779.000000           100.000000
+
+Correlation between Death Rate and Pollutant Exceedance Count:
+                          Death Rate  Primary Exceedance Count
+Death Rate                  1.000000                  0.029802
+Primary Exceedance Count    0.029802                  1.000000
+
+Number of Unique Pollutants:
+6
+
+Frequency of Each Pollutant:
+Parameter Name
+PM2.5 - Local Conditions    23511
+Ozone                       13604
+PM10 Total 0-10um STP        4159
+Carbon monoxide              2974
+Sulfur dioxide               2868
+Nitrogen dioxide (NO2)       1385
+
+Average Death Rate by Pollutant:
+Parameter Name
+Sulfur dioxide              903.747006
+PM2.5 - Local Conditions    865.521632
+Ozone                       837.687016
+PM10 Total 0-10um STP       836.231907
+Nitrogen dioxide (NO2)      807.955560
+Carbon monoxide             805.834021
