@@ -5,7 +5,7 @@ Insert record here
 
 ## Contributors
 - Izhaan Hussain
--- ORCID: 0009-0005-2240-8773
+  - ORCID: 0009-0005-2240-8773
 
 ## Description of Research
 
@@ -56,6 +56,12 @@ In order to merge the two datasets into one table to use for analysis, we had to
 We then wanted to merge the data by state code, county code, and year, however, we needed to change the format of the county codes for the EPA data to match that of the CDC. We then proceeded to merge the data which is in results/merged_data.csv.
 
 ## Findings
+In order to find how pollutant levels affected mortality rates, we created a scatterplot of two relevant variables. To assess pollutant levels, we used "Primary Exceedance Count" which is the number of times pollutant levels exceeded regulatory standards. To assess mortality rates, we used "Crude Death Rate". This results in the following plot: 
+
+![Primary Exceedance Count vs Crude Death Rate](output/results/death_pollutants_over_time.png)
+
+Although there is a weak positive correlation and a slight upward trend, indicating that higher exceedance counts may be associated with higher death rates, the relationship is not strong enough to draw definitive conclusions. This weak correlation implies that while pollutant exceedances contribute to health outcomes, other factors such as socioeconomic conditions, healthcare access, and underlying health conditions likely play significant roles in influencing crude death rates.
+
 
 ## Future Work
 
