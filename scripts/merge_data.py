@@ -1,10 +1,8 @@
 import pandas as pd
 
-# Load the datasets
 cdc_data = pd.read_csv('../output/cleanedInputs/cleaned_cdc_data.csv')
 epa_data = pd.read_csv('../output/cleanedInputs/cleaned_epa_data.csv')
 
-# Convert State Code and County Code to integers in both datasets
 cdc_data['State Code'] = cdc_data['State Code'].astype(int)
 cdc_data['County Code'] = cdc_data['County Code'].astype(int)
 epa_data['State Code'] = epa_data['State Code'].astype(int)

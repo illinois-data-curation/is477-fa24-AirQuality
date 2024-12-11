@@ -56,12 +56,85 @@ In order to merge the two datasets into one table to use for analysis, we had to
 We then wanted to merge the data by state code, county code, and year, however, we needed to change the format of the county codes for the EPA data to match that of the CDC. We then proceeded to merge the data which is in results/merged_data.csv.
 
 ## Findings
-In order to find how pollutant levels affected mortality rates, we created a scatterplot of two relevant variables. To assess pollutant levels, we used "Primary Exceedance Count" which is the number of times pollutant levels exceeded regulatory standards. To assess mortality rates, we used "Crude Death Rate". This results in the following plot: 
+#### Exploratory Analysis
+In order to observe basic trends and correlations in our data, we calculate some summary statistics.
 
-![Primary Exceedance Count vs Crude Death Rate](output/results/death_pollutants_over_time.png)
+Summary Statistics for Pollutants:
+       Primary Exceedance Count  Observation Count  Observation Percent
+count              48501.000000       48501.000000         48501.000000
+mean                  11.322674        2716.996495            87.902229
+std                   31.586154        3425.601606            19.424289
+min                    0.000000           1.000000             0.000000
+25%                    0.000000         107.000000            89.000000
+50%                    1.000000         314.000000            95.000000
+75%                    6.000000        5824.000000            98.000000
+max                  329.000000        8779.000000           100.000000
+
+The statistics above show some summaries for pollutants. The most notable statistics are the average primary exceedance count being 11.3 which is the number of times pollutant levels exceeded regulatory standards.
+
+Correlation between Death Rate and Pollutant Exceedance Count:
+                          Death Rate  Primary Exceedance Count
+Death Rate                  1.000000                  0.029802
+Primary Exceedance Count    0.029802                  1.000000
+
+We can see that there is a slight correlation between death rate and primary exceedance count. Given the context of this, it is still a significant amount.
+
+Number of Unique Pollutants:
+6
+
+The number of unique pollutants in our data is 6.
+
+Frequency of Each Pollutant:
+Parameter Name
+PM2.5 - Local Conditions    23511
+Ozone                       13604
+PM10 Total 0-10um STP        4159
+Carbon monoxide              2974
+Sulfur dioxide               2868
+Nitrogen dioxide (NO2)       1385
+
+The most frequently recorded pollutant was PM2.5 - Local Conditions, appearing in 23,511 observations, followed by Ozone with 13,604 observations.
+
+Average Death Rate by Pollutant:
+Parameter Name
+Sulfur dioxide              903.747006
+PM2.5 - Local Conditions    865.521632
+Ozone                       837.687016
+PM10 Total 0-10um STP       836.231907
+Nitrogen dioxide (NO2)      807.955560
+Carbon monoxide             805.834021
+
+Sulfur dioxide had the highest average death rate (903 per 100,000), reinforcing its significance as a health risk factor.
+
+#### Pollutant Levels and Mortality Rates
+In order to find how pollutant levels affected mortality rates, we created a scatterplot of two relevant variables. To assess pollutant levels, we used "Primary Exceedance Count" and to assess mortality rates, we used "Crude Death Rate". This results in the following plot: 
+
+![Primary Exceedance Count vs Crude Death Rate](output/results/primary_exceedance_vs_crude_rate.png)
 
 Although there is a weak positive correlation and a slight upward trend, indicating that higher exceedance counts may be associated with higher death rates, the relationship is not strong enough to draw definitive conclusions. This weak correlation implies that while pollutant exceedances contribute to health outcomes, other factors such as socioeconomic conditions, healthcare access, and underlying health conditions likely play significant roles in influencing crude death rates.
 
+##### Geographic Distribution of Mortality
+The second objective we wanted to tackle was the geographic distribution of crude death rates across US counties. This resulted in the following plot:
+
+![Geographic Distribution of Crude Death Rates](output/results/geo_analysis.png)
+
+Higher crude death rates were observed in parts of the western and southern United States. The geographic variability suggests that different regions experience varying levels of air quality and health impacts due to factors such as population density, proximity to pollution sources, and socioeconomic disparities.
+
+This spatial analysis highlights the importance of region-specific policies and interventions to address air quality issues effectively. Regions with higher death rates may require increased healthcare resources, stricter pollution controls, and targeted public health campaigns to mitigate adverse health effects.
+
+#### Mean Crude Rate by Pollutant
+In order to find which pollutants had the biggest effect on crude death rate, we created a bar chart to visualize this:
+
+![Geographic Distribution of Crude Death Rates](output/results/parameter_analysis.png)
+
+Sulfur dioxide and PM2.5 - Local Conditions were associated with the highest mean crude death rates, while Carbon monoxide and Nitrogen dioxide (NO2) were linked to comparatively lower crude rates. These results suggest that certain pollutants, particularly Sulfur dioxide and PM2.5, may pose a higher risk to public health and contribute more significantly to adverse health outcomes compared to others. This finding underscores the need for targeted interventions to reduce emissions of these harmful pollutants.
+
+#### Trends Over Time
+In order to see whether there are lagged effects of pollutants on health outcomes, we created a line chart showing "Primary Exceedance Count" and "Crude Death Rate":
+
+![Geographic Distribution of Crude Death Rates](output/results/death_pollutants_over_time.png)
+
+The chart shows relativelt stable patterns. This suggests that although there are fluctuations, there may not be immediate impacts on death rates within short time frames. It also raises the possibility that long-term exposure to even low levels of pollutants can have cumulative health effects.
 
 ## Future Work
 
