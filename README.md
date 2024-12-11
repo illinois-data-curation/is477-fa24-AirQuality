@@ -57,54 +57,7 @@ We then wanted to merge the data by state code, county code, and year, however, 
 
 ## Findings
 #### Exploratory Analysis
-In order to observe basic trends and correlations in our data, we calculate some summary statistics.
-
-Summary Statistics for Pollutants:
-       Primary Exceedance Count  Observation Count  Observation Percent
-count              48501.000000       48501.000000         48501.000000
-mean                  11.322674        2716.996495            87.902229
-std                   31.586154        3425.601606            19.424289
-min                    0.000000           1.000000             0.000000
-25%                    0.000000         107.000000            89.000000
-50%                    1.000000         314.000000            95.000000
-75%                    6.000000        5824.000000            98.000000
-max                  329.000000        8779.000000           100.000000
-
-The statistics above show some summaries for pollutants. The most notable statistics are the average primary exceedance count being 11.3 which is the number of times pollutant levels exceeded regulatory standards.
-
-Correlation between Death Rate and Pollutant Exceedance Count:
-                          Death Rate  Primary Exceedance Count
-Death Rate                  1.000000                  0.029802
-Primary Exceedance Count    0.029802                  1.000000
-
-We can see that there is a slight correlation between death rate and primary exceedance count. Given the context of this, it is still a significant amount.
-
-Number of Unique Pollutants:
-6
-
-The number of unique pollutants in our data is 6.
-
-Frequency of Each Pollutant:
-Parameter Name
-PM2.5 - Local Conditions    23511
-Ozone                       13604
-PM10 Total 0-10um STP        4159
-Carbon monoxide              2974
-Sulfur dioxide               2868
-Nitrogen dioxide (NO2)       1385
-
-The most frequently recorded pollutant was PM2.5 - Local Conditions, appearing in 23,511 observations, followed by Ozone with 13,604 observations.
-
-Average Death Rate by Pollutant:
-Parameter Name
-Sulfur dioxide              903.747006
-PM2.5 - Local Conditions    865.521632
-Ozone                       837.687016
-PM10 Total 0-10um STP       836.231907
-Nitrogen dioxide (NO2)      807.955560
-Carbon monoxide             805.834021
-
-Sulfur dioxide had the highest average death rate (903 per 100,000), reinforcing its significance as a health risk factor.
+In order to observe basic trends and correlations in our data, we calculate some summary statistics that are in output/results/eda_summary.txt. The most notable statistic in the summaries for pollutants is the average primary exceedance count being 11.3 which is the number of times pollutant levels exceeded regulatory standards. We can also see that there is a slight correlation between death rate and primary exceedance count. Given the context of this, it is still a significant amount. As far as the pollutants themselves go, the number of unique pollutants in our data is 6. The most frequently recorded pollutant was PM2.5 - Local Conditions, appearing in 23,511 observations, followed by Ozone with 13,604 observations. When we grouped the death rate along with the pollutants, we found sulfur dioxide had the highest average death rate (903 per 100,000), reinforcing its significance as a health risk factor.
 
 #### Pollutant Levels and Mortality Rates
 In order to find how pollutant levels affected mortality rates, we created a scatterplot of two relevant variables. To assess pollutant levels, we used "Primary Exceedance Count" and to assess mortality rates, we used "Crude Death Rate". This results in the following plot: 
