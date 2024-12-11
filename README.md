@@ -66,7 +66,7 @@ In order to find how pollutant levels affected mortality rates, we created a sca
 
 Although there is a weak positive correlation and a slight upward trend, indicating that higher exceedance counts may be associated with higher death rates, the relationship is not strong enough to draw definitive conclusions. This weak correlation implies that while pollutant exceedances contribute to health outcomes, other factors such as socioeconomic conditions, healthcare access, and underlying health conditions likely play significant roles in influencing crude death rates.
 
-##### Geographic Distribution of Mortality
+#### Geographic Distribution of Mortality
 The second objective we wanted to tackle was the geographic distribution of crude death rates across US counties. This resulted in the following plot:
 
 ![Geographic Distribution of Crude Death Rates](output/results/geo_analysis.png)
@@ -90,6 +90,15 @@ In order to see whether there are lagged effects of pollutants on health outcome
 The chart shows relativelt stable patterns. This suggests that although there are fluctuations, there may not be immediate impacts on death rates within short time frames. It also raises the possibility that long-term exposure to even low levels of pollutants can have cumulative health effects.
 
 ## Future Work
+Throughout this project, we gained several important insights into the relationship between air quality and health outcomes, as well as the challenges associated with data analysis in this field. One significant lesson was the importance of selecting appropriate datasets that align with the project’s objectives. Initially, we identified datasets that did not fully support our research goals, prompting us to refine our data sources by incorporating datasets from the CDC WONDER API and the EPA's Air Quality System (AQS). 
+
+Another key takeaway was the complexity of interpreting correlations between air quality and health outcomes. While certain pollutants, such as Sulfur dioxide and PM2.5, showed a stronger association with higher crude death rates, the overall correlation between pollutant exceedance counts and health outcomes was weak. This underscores the fact that health outcomes are influenced by multiple factors, including socioeconomic conditions, healthcare access, and pre-existing health conditions. Understanding these relationships requires a multidisciplinary approach and deeper analysis beyond simple correlation.
+
+Additionally, the geographic variability in crude death rates highlighted the importance of considering regional and contextual factors when analyzing air quality data. Different regions, such as urban, suburban, and rural areas, experience varying levels of pollution and health impacts. This insight emphasizes the need for region-specific public health policies and interventions.
+
+Finally, we learned the value of combining visual analysis (charts and maps) with statistical summaries to provide a more comprehensive understanding of the data. Visualizations helped identify patterns and anomalies that were not immediately obvious from raw data alone.
+
+In order to take this research futher, there are several things we can do to refine our research. We could incorporate additional variables which will help us understand the factors influencing health outcomes more. This can include things such as healthcare access, demographics, and pre-existing conditions. We can also expand our analysis to cover a long period of time which will help us espcially figure out the cumulative effects of pollution. We can also apply more advanced statistical models to understand how exactly a pollutant will affect outcomes based off estimates of coefficients. Finally, if we investigate the impact of environmental policies and regulations in improving air quality, we can understand whether implementing these would help improve health outcomes.
 
 ## Reproducing
 
