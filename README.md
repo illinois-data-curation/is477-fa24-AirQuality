@@ -6,6 +6,8 @@ Insert record here
 ## Contributors
 - Izhaan Hussain
   - ORCID: 0009-0005-2240-8773
+- Kashan Ali
+  - ORCID: 0009-0008-5062-9276
 
 ## Description of Research
 
@@ -13,11 +15,13 @@ The objective of this project is to analyze trends over time across various regi
 
 "How do changes in air quality impact health outcomes in different areas?"
 
-The fundamental premise is that poorer air quality adversely affects health, potentially leading to increased hospitalizations and respiratory conditions. Understanding this relationship is critical for informing public health initiatives and policy interventions. Accurate data on the impact of air quality on health outcomes enables policymakers to identify high-risk areas and implement targeted measures, such as stricter emissions regulations, public health advisories, and increased funding for healthcare infrastructure in affected regions. Healthcare providers can use this information to anticipate patient needs, offer preventive care, and design community health programs aimed at mitigating the effects of air pollution. Environmental organizations can leverage these insights to advocate for cleaner air policies, promote sustainable practices, and raise public awareness about the health risks associated with air pollution. Furthermore, this understanding can help direct resources toward vulnerable populations, such as children, the elderly, and individuals with pre-existing conditions, who are disproportionately affected by poor air quality. Ultimately, addressing air pollution through evidence-based strategies can lead to healthier communities, reduced healthcare costs, and improved overall quality of life.
+The fundamental premise is that poorer air quality adversely affects health, potentially leading to increased hospitalizations and respiratory conditions. Poor air quality can also exacerbate existing chronic conditions such as asthma and cardiovascular diseases, further burdening healthcare systems. Understanding this relationship is critical for informing public health initiatives and policy interventions. Accurate data on the impact of air quality on health outcomes enables policymakers to identify high-risk areas and implement targeted measures, such as stricter emissions regulations, public health advisories, and increased funding for healthcare infrastructure in affected regions. Healthcare providers can use this information to anticipate patient needs, offer preventive care, and design community health programs aimed at mitigating the effects of air pollution. Environmental organizations can leverage these insights to advocate for cleaner air policies, promote sustainable practices, and raise public awareness about the health risks associated with air pollution. Furthermore, this understanding can help direct resources toward vulnerable populations, such as children, the elderly, and individuals with pre-existing conditions, who are disproportionately affected by poor air quality. Ultimately, addressing air pollution through evidence-based strategies can lead to healthier communities, reduced healthcare costs, and improved overall quality of life.
+
+To improve reproducibility, all generated plots, code, and datasets have been archived and referenced below. Regression models were designed to provide deeper insights into pollutant-health relationships, specifically highlighting how population size correlates to mortality rates and crude rates.
 
 We will be using the following objectives to guide our research:
 
-- **Objective 1: The overall effect of air quality and pollutants on health ouctomes**
+- **Objective 1: The overall effect of air quality and pollutants on health outcomes**
   - What is the overall effect certain pollutants have on health effects?
   - We will be looking at whether pollutants have an effect on health outcomes, and what type of effect.
 - **Objective 2: Geographic Differences in Air Quality and Health Outcome Relationship**
@@ -26,7 +30,7 @@ We will be using the following objectives to guide our research:
 - **Objective 3: The impact of specific pollutants**
   - Do specific pollutants (e.g., PM2.5, NO2, O3) have a different effect on health outcomes?
   - Air quality statistics also involve different categories of pollutants. This sub-question will, therefore, investigate whether some categories of pollutants have a greater effect on health outcomes in determining which ones are most harmful to public health.
-- **Objective 4: Lagged affects of air quality on health**
+- **Objective 4: Lagged effects of air quality on health**
   - Do changes in air quality in one period (e.g., previous month or season) predict changes in health outcomes in subsequent periods?
   - It will further investigate whether the variation in air quality in one period has a lagged health consequence in another period. This project will contribute to the identification of lagged health effects caused by poor air quality.
 
@@ -43,17 +47,13 @@ The first dataset we selected was obtained through the CDC Wonder API. The datas
 
 This API allows users to access mortality data spanning from 1999 to the present, making it suitable for long-term trend analysis. Researchers can query the data by specific causes of death, categorized by ICD-10 codes, and filter results by parameters such as year, place of death, and population group. The dataset provides mortality rates, counts of deaths, and age-adjusted rates, enabling comprehensive epidemiological research. Since we are focusing our research on the years 2000-2003, we filtered the API to those years.
 
-The CDC API supports public health initiatives by offering insights into patterns and trends in mortality, including causes related to chronic diseases, infectious diseases, injuries, and other health conditions. It is particularly useful for identifying health disparities across different populations and regions, as well as assessing the impact of public health policies over time. However, in order to safeguard the individuals' identities, there are restrictions in place. In compliance with the data use restrictions, we are using this data solely for analysis and are not attempting to identify any individuals within the dataset. We extracted the relevant data from the API and stored it in our "data" folder. 
+The CDC API supports public health initiatives by offering insights into patterns and trends in mortality, including causes related to chronic diseases, infectious diseases, injuries, and other health conditions. It is particularly useful for identifying health disparities across different populations and regions, as well as assessing the impact of public health policies over time. However, in order to safeguard the individuals' identities, there are restrictions in place. In compliance with the data use restrictions, we are using this data solely for analysis and are not attempting to identify any individuals within the dataset. We extracted the relevant data from the API and stored it in our "data" folder.
 
 The second dataset, obtained from the U.S. Environmental Protection Agency's (EPA) Air Quality System (AQS), provides extensive annual air quality data covering multiple years and regions across the United States. It contains measurements for a range of pollutants, including particulate matter (PM2.5 and PM10), ozone (O3), sulfur dioxide (SO2), nitrogen dioxide (NO2), and carbon monoxide (CO). These pollutants are tracked by numerous state and local air quality monitoring stations, offering a detailed perspective on air quality trends over time and across different areas.
 
-Aligned with the project's goal of analyzing the relationship between health outcomes and air quality over time in various locations, this dataset is a valuable resource for understanding how changes in pollutant levels affect respiratory health and other health conditions. Covering the period from 2000 to 2003, this data supports research on pollution trends, seasonal patterns, and events influencing air quality. Insights derived from this analysis can aid in developing policies and allocating resources to reduce the adverse health impacts of air pollution. 
+Aligned with the project's goal of analyzing the relationship between health outcomes and air quality over time in various locations, this dataset is a valuable resource for understanding how changes in pollutant levels affect respiratory health and other health conditions. Covering the period from 2000 to 2003, this data supports research on pollution trends, seasonal patterns, and events influencing air quality. Insights derived from this analysis can aid in developing policies and allocating resources to reduce the adverse health impacts of air pollution.
 
 This data was accessed directly by the API, and since the data is classified as public domain under the EPA's license, we are permitted to use it without needing explicit permission. This data was also stored in our "data" folder for the corresponding years.
-
-In order to merge the two datasets into one table to use for analysis, we had to do some cleaning. This included dropping the following variables from the EPA table: [ ‘Site Num', ‘Parameter Code', ‘Latitude', ‘Longitude', ‘Datum', ‘Sample Duration', ‘Pollutant Standard', ‘Metric Used', ‘Method Name','Event Type', ‘Completeness Indicator', 'Valid Day Count', ‘Required Day Count', "Null Data Count', 'Secondary Exceedance Count', "Secondary Exceedance Count', ‘Certification Indicator’, ‘Certification Indicator', ‘Num Obs Below MDL', ‘Arithmetic Mean', ‘Arithmetic Standard Dev', ‘1st Max Value','1st Max DateTime', "2nd Max Value', ‘2nd Max DateTime', ‘3rd Max Value', ‘3rd Max DateTime’, ‘4th Max Value', '4th Max DateTime', ‘1st Max Non Overlapping Value', ‘Ist NO Max DateTime', '2nd Max Non Overlapping Value', "2nd NO Max DateTime', '99th Percentile', ‘98th Percentile', ‘95th Percentile', ‘90th Percentile','75th Percentile’, ‘50th Percentile’, ‘10th Percentile', ‘Address', ‘Date of Last Change’ ]. Additionally, from the CDC table, we dropped the following columns: ['Notes', 'Year Code', ‘Crude Rate Lower 95% Confidence Interval', ‘Crude Rate Upper 95% Confidence Interval','Crude Rate Standard Error']. We also removed any rows that contained null or NaN values. This was all done using the code in scripts/clean_data.py.
-
-We then wanted to merge the data by state code, county code, and year, however, we needed to change the format of the county codes for the EPA data to match that of the CDC. We then proceeded to merge the data which is in results/merged_data.csv.
 
 ## Findings
 #### Exploratory Analysis
@@ -89,6 +89,23 @@ In order to see whether there are lagged effects of pollutants on health outcome
 
 The chart shows relativelt stable patterns. This suggests that although there are fluctuations, there may not be immediate impacts on death rates within short time frames. It also raises the possibility that long-term exposure to even low levels of pollutants can have cumulative health effects.
 
+#### Regression Analysis
+To further investigate the relationship between population size, pollutant exceedances, and health outcomes, we generated the following regression plots:
+
+1. **Population vs. Crude Rate**
+   ![Population vs Crude Rate](output\results\regressions\Population_vs_Crude_Rate.png)
+   - **Analysis**: The regression shows a negative correlation between population size and crude death rates. This result suggests that larger populations tend to have lower crude death rates, possibly due to better healthcare access, infrastructure, and preventive measures in densely populated areas.
+
+2. **Population vs. Deaths**
+   ![Population vs Deaths](output\results\regressions\Population_vs_Deaths.png)
+   - **Analysis**: The regression reveals a strong positive correlation between population size and the number of deaths, which is an expected finding as larger populations have more individuals at risk. This emphasizes the importance of using normalized metrics like crude death rates for comparisons across regions with differing population sizes.
+
+3. **Primary Exceedance Count vs. Crude Rate**
+   ![Primary Exceedance Count vs Crude Rate](output\results\regressions\Primary_Exceedance_Count_vs_Crude_Rate.png)
+   - **Analysis**: The regression line indicates a slight positive correlation between pollutant exceedances and crude death rates. While this correlation is weak, it aligns with the hypothesis that areas experiencing more frequent exceedances of pollutant thresholds tend to have slightly worse health outcomes.
+
+These regression findings underscore the need for further investigation into causal factors, as well as the integration of additional variables such as socioeconomic status, healthcare access, and chronic disease prevalence to improve model robustness.
+
 ## Future Work
 Throughout this project, we gained several important insights into the relationship between air quality and health outcomes, as well as the challenges associated with data analysis in this field. One significant lesson was the importance of selecting appropriate datasets that align with the project’s objectives. Initially, we identified datasets that did not fully support our research goals, prompting us to refine our data sources by incorporating datasets from the CDC WONDER API and the EPA's Air Quality System (AQS). 
 
@@ -101,5 +118,19 @@ Finally, we learned the value of combining visual analysis (charts and maps) wit
 In order to take this research futher, there are several things we can do to refine our research. We could incorporate additional variables which will help us understand the factors influencing health outcomes more. This can include things such as healthcare access, demographics, and pre-existing conditions. We can also expand our analysis to cover a long period of time which will help us espcially figure out the cumulative effects of pollution. Further exploration of the lagged effects of air quality on health outcomes could provide insights into longer health consequences of pollution exposure. This analysis could help predict future health burdens based on current pollution levels and help inform timely solutions. We can also apply more advanced statistical models to understand how exactly a pollutant will affect outcomes based off estimates of coefficients. These methods could also help identify causal relationships rather than simple correlations. Finally, if we investigate the impact of environmental policies and regulations in improving air quality, we can understand whether implementing these would help improve health outcomes.
 
 ## Reproducing
+1. Download the archived dataset and scripts from the link above.
+2. Ensure all required dependencies are installed (see `requirements.txt`).
+3. Run `scripts/load_data.py`, `scripts/clean_data.py` , and `scripts/merge_data.py`  to preprocess and merge datasets.
+4. Run the remaining scripts not including the regression.py to create the scatter plots needed
+5. Execute `scripts/regression.py` to generate regression visualizations.
+6. Review outputs in the `results` folder for analysis and findings.
+
+
+## Work Split
+
+All Team members contributed equally to this project. All data cleaning, preprocessing, and merging was done by Kashan. While the initial data analyis was done by Izhaan. The final data analysis and all written portions were done by Kashan & Izhaan.
+
 
 ## References
+- Centers for Disease Control and Prevention Wonder API: https://wonder.cdc.gov/cmf-icd10.html
+- Environmental Protection Agency API: https://aqs.epa.gov/aqsweb/documents/data_api.html
