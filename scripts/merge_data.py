@@ -1,7 +1,7 @@
 import pandas as pd
 
-cdc_data = pd.read_csv('../output/cleanedInputs/cleaned_cdc_data.csv')
-epa_data = pd.read_csv('../output/cleanedInputs/cleaned_epa_data.csv')
+cdc_data = pd.read_csv('output/cleanedInputs/cleaned_cdc_data.csv')
+epa_data = pd.read_csv('output/cleanedInputs/cleaned_epa_data.csv')
 
 cdc_data['State Code'] = cdc_data['State Code'].astype(int)
 cdc_data['County Code'] = cdc_data['County Code'].astype(int)
@@ -21,4 +21,4 @@ merged_data = pd.merge(
 
 merged_data = merged_data.drop(columns=['County Name', 'State Name'], errors='ignore')  
 
-merged_data.to_csv("../output/results/merged_data.csv", index=False)
+merged_data.to_csv("output/results/merged_data.csv", index=False)

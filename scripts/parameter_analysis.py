@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("../output/results/merged_data.csv")
+df = pd.read_csv("output/results/merged_data.csv")
 
 parameter_summary = df.groupby('Parameter Name').agg({
     'Primary Exceedance Count': ['mean', 'median', 'max'],
@@ -29,4 +29,4 @@ plt.title('Mean Crude Rate by Pollutant')
 fig.tight_layout()
 plt.grid(True)
 
-plt.savefig('../output/results/parameter_analysis.png', dpi=300, bbox_inches='tight')
+plt.savefig('output/results/parameter_analysis.png', dpi=300, bbox_inches='tight')

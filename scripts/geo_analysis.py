@@ -1,7 +1,7 @@
 import pandas as pd
 import plotly.express as px
 
-merged_data = pd.read_csv('../output/results/merged_data.csv')
+merged_data = pd.read_csv('output/results/merged_data.csv')
 
 # Creates a choropleth map of crude death rate by county
 fig = px.choropleth(
@@ -15,4 +15,4 @@ fig = px.choropleth(
 )
 
 fig.update_geos(fitbounds="locations", visible=False)
-fig.write_image('../output/results/geo_analysis.png', scale=2)
+fig.write_image('output/results/geo_analysis.png', scale=2)

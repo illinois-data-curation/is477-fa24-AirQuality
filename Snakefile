@@ -1,4 +1,10 @@
 rule load_data:
+    input: 
+        "data/cdc/Mortality_Rates_2000-2003.json",
+        "data/epa/annual_conc_by_monitor_2000.csv",
+        "data/epa/annual_conc_by_monitor_2001.csv",
+        "data/epa/annual_conc_by_monitor_2002.csv",
+        "data/epa/annual_conc_by_monitor_2003.csv"
     output:
         "output/uncleanedInputs/cdc_data.csv",
         "output/uncleanedInputs/combined_epa_data.csv"
