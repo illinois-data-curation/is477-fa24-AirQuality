@@ -1,7 +1,9 @@
 # Relationship between Air Quality and Health Outcomes
 
 ## Archived Record
-Insert record here
+https://zenodo.org/records/14404672?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImQ4M2MwNTczLTFjMzEtNDk5MC04MjJhLWNlMTNlNDUyNWU1MCIsImRhdGEiOnt9LCJyYW5kb20iOiI5YzcyMTlhNTJhYjIwOTE2MmVmZTQ4NTg3ZDYxM2EyYiJ9.DQgXQFnOj8_hEtJjOpNuX9nDoYQsklcigCSBoQWYfKvhDXnsWxshQKFdTHweEHu-I0D1x0u-8N7hyyAfNvYP4Q
+
+Identifier: 10.5281/zenodo.14404672
 
 ## Contributors
 - Izhaan Hussain
