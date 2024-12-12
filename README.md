@@ -134,3 +134,7 @@ All Team members contributed equally to this project. All data cleaning, preproc
 ## References
 - Centers for Disease Control and Prevention Wonder API: https://wonder.cdc.gov/cmf-icd10.html
 - Environmental Protection Agency API: https://aqs.epa.gov/aqsweb/documents/data_api.html
+
+## Output
+All output is available with the following link:
+https://uofi.box.com/s/qeu64ckn2i50oen30wktcroo2psgnx5u
